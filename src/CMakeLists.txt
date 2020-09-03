@@ -5,8 +5,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(openexr-examples)
 
-set(CMAKE_PREFIX_PATH /home/cary/builds/src/cary-ilm/openexr/master/install)
-
 find_package (OpenEXR)
 
 add_executable(openexr-examples
