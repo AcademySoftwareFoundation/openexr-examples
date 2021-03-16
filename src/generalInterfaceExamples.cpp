@@ -210,7 +210,7 @@ readGZ1 (const char fileName[],
 			       sizeof (zPixels[0][0]) * 1,	 // xStride
 			       sizeof (zPixels[0][0]) * width,	// yStride
 			       1, 1,				// x/y sampling
-			       FLT_MAX));			// fillValue
+			       std::numeric_limits<float>::max()));			// fillValue
 
     file.setFrameBuffer (frameBuffer);
     file.readPixels (dw.min.y, dw.max.y);

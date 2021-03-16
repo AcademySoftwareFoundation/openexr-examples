@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # Copyright Contributors to the OpenEXR Project.
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 
 project(openexr-examples)
 
@@ -18,8 +18,5 @@ add_executable(openexr-examples
   rgbaInterfaceTiledExamples.cpp
 )
 
-target_link_libraries(openexr-examples OpenEXR::IlmImf)
+target_link_libraries(openexr-examples OpenEXR::OpenEXR)
 
-if(WIN32 AND (BUILD_SHARED_LIBS OR OPENEXR_BUILD_BOTH_STATIC_SHARED))
-  target_compile_definitions(IlmImfExamples PRIVATE OPENEXR_DLL)
-endif()
